@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tıklaoyna – Ücretsiz Online Oyunlar</title>
+  <meta name="description" content="Ücretsiz, hızlı ve eğlenceli tarayıcı oyunları. İndirme yok, hemen oyna!">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="container">
+    <a href="index.html" class="logo">Tıkla<span>oyna</span></a>
+    <nav>
+      <a href="index.html">Oyunlar</a>
+      <a href="#" title="Yakında">Üye Ol</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <h1>Tıkla, oyna, eğlen!</h1>
+    <p>İndirme yok, kayıt yok. Telefonundan veya bilgisayarından hemen oynamaya başla.</p>
+  </section>
+
+  <!-- Reklam alanı 1: Google AdSense onaylandığında buraya reklam kodu eklenecek -->
+  <div class="ad-slot">Reklam alanı</div>
+
+  <h2 class="section">Tüm Oyunlar</h2>
+  <div class="grid" id="oyun-listesi"></div>
+
+  <div class="ad-slot">Reklam alanı</div>
+</main>
+
+<footer class="site">
+  <div class="container">© 2026 Tıklaoyna. Tüm hakları saklıdır.</div>
+</footer>
+
+<script src="games.js"></script>
+<script>
+  const liste = document.getElementById("oyun-listesi");
+  liste.innerHTML = GAMES.map(g => `
+    <a class="card" href="oyun.html?id=${g.id}">
+      <div class="thumb">${g.emoji}</div>
+      <div class="body">
+        <h3>${g.title}</h3>
+        <p>${g.description}</p>
+        <span class="tag">${g.category}</span>
+      </div>
+    </a>
+  `).join("");
+</script>
+</body>
+</html>

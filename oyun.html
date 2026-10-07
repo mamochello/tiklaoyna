@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oyun – Tıklaoyna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="container">
+    <a href="index.html" class="logo">Tıkla<span>oyna</span></a>
+    <nav>
+      <a href="index.html">Oyunlar</a>
+      <a href="#" title="Yakında">Üye Ol</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container game-wrap">
+  <div class="ad-slot">Reklam alanı</div>
+
+  <!-- Oyun buraya yüklenir -->
+  <div class="game-box" id="oyun-alani">
+    <p>Oyun yükleniyor…</p>
+  </div>
+
+  <div class="ad-slot">Reklam alanı</div>
+
+  <p style="text-align:center"><a href="index.html" style="color:var(--accent-2)">← Tüm oyunlara dön</a></p>
+</main>
+
+<footer class="site">
+  <div class="container">© 2026 Tıklaoyna. Tüm hakları saklıdır.</div>
+</footer>
+
+<script src="games.js"></script>
+<script>
+  const id = new URLSearchParams(location.search).get("id");
+  const oyun = GAMES.find(g => g.id === id);
+  const alan = document.getElementById("oyun-alani");
+
+  if (!oyun) {
+    alan.innerHTML = "<h1>Oyun bulunamadı</h1><p class='desc'>Ana sayfadan başka bir oyun seçebilirsin.</p>";
+  } else {
+    document.title = oyun.title + " – Tıklaoyna";
+    alan.innerHTML = `<h1>${oyun.emoji} ${oyun.title}</h1><p class="desc">${oyun.description}</p><div id="oyun"></div>`;
+    const s = document.createElement("script");
+    s.src = oyun.script;
+    document.body.appendChild(s);
+  }
+</script>
+</body>
+</html>
