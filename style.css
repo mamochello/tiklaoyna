@@ -108,6 +108,64 @@ button.big.alt { background: var(--accent-2); }
 
 .result { margin-top: 20px; min-height: 28px; font-weight: 700; }
 
+/* ---- Ortak: oyun alanında hızlı dokunuşta yakınlaşmayı engelle ---- */
+.game-box button, .game-box canvas { touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+
+/* ---- Hafıza Kartları ---- */
+.kart-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+  max-width: 360px; margin: 0 auto 16px;
+}
+button.kart {
+  aspect-ratio: 1; border: 0; border-radius: 12px;
+  background: var(--panel-2); color: var(--muted);
+  font-size: 2rem; cursor: pointer; transition: transform .15s, background .15s;
+}
+button.kart:active { transform: scale(.95); }
+button.kart.acik { background: var(--accent-2); color: #111; }
+button.kart.bulundu { background: #2dc653; color: #111; }
+
+/* ---- Kelime Bulmaca ---- */
+.kb-tahta { display: grid; gap: 6px; justify-content: center; margin-bottom: 12px; }
+.kb-satir { display: grid; grid-template-columns: repeat(5, minmax(0, 52px)); gap: 6px; }
+.kb-kutu {
+  aspect-ratio: 1; display: grid; place-items: center;
+  border: 2px solid var(--panel-2); border-radius: 8px;
+  font-size: 1.6rem; font-weight: 800;
+}
+.kb-kutu.dolu { border-color: var(--muted); }
+.kb-kutu.dogru, .kb-tus.dogru { background: #2dc653; border-color: #2dc653; color: #111; }
+.kb-kutu.var, .kb-tus.var { background: var(--accent); border-color: var(--accent); color: #111; }
+.kb-kutu.yok, .kb-tus.yok { background: #3a3f6b; border-color: #3a3f6b; color: var(--muted); }
+.kb-klavye { display: grid; gap: 6px; max-width: 480px; margin: 0 auto; }
+.kb-tus-satir { display: flex; gap: 4px; justify-content: center; }
+button.kb-tus {
+  flex: 1; min-width: 0; height: 46px; border: 0; border-radius: 6px;
+  background: var(--panel-2); color: var(--text);
+  font-size: .95rem; font-weight: 700; cursor: pointer;
+}
+button.kb-tus.genis { flex: 1.6; font-size: .8rem; }
+
+/* ---- Yılan ---- */
+.yilan-tuval {
+  display: block; margin: 0 auto 16px;
+  width: min(100%, 340px); height: auto; aspect-ratio: 1;
+  border-radius: 12px; border: 2px solid var(--panel-2);
+  touch-action: none;
+}
+.dpad {
+  display: grid; gap: 6px; max-width: 200px; margin: 0 auto 12px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: ". yukari ." "sol . sag" ". asagi .";
+}
+button.dpad-btn {
+  height: 52px; border: 0; border-radius: 12px;
+  background: var(--panel-2); color: var(--text); font-size: 1.3rem; cursor: pointer;
+}
+button.dpad-btn:active { background: #3a3f6b; }
+.dpad .yukari { grid-area: yukari; } .dpad .sol { grid-area: sol; }
+.dpad .sag { grid-area: sag; } .dpad .asagi { grid-area: asagi; }
+
 footer.site {
   margin-top: 48px; padding: 24px 0;
   border-top: 1px solid var(--panel-2);
@@ -116,4 +174,8 @@ footer.site {
 
 @media (max-width: 520px) {
   nav a { margin-left: 12px; }
+  .game-box { padding: 16px 8px; }
+  .kb-tus-satir { gap: 3px; }
+  button.kb-tus { height: 48px; font-size: .85rem; }
+  button.kb-tus.genis { font-size: .7rem; }
 }
