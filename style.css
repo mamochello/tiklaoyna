@@ -166,6 +166,68 @@ button.dpad-btn:active { background: #3a3f6b; }
 .dpad .yukari { grid-area: yukari; } .dpad .sol { grid-area: sol; }
 .dpad .sag { grid-area: sag; } .dpad .asagi { grid-area: asagi; }
 
+/* ---- 2048 ---- */
+.g2048-tahta {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+  max-width: 340px; margin: 0 auto 16px; padding: 8px;
+  background: #12152e; border-radius: 12px;
+}
+.g2048-hucre {
+  aspect-ratio: 1; display: grid; place-items: center;
+  border-radius: 8px; background: var(--panel-2);
+  font-weight: 800; font-size: 1.6rem; color: var(--text);
+}
+.g2048-hucre.v2 { background: #3b4a8f; }
+.g2048-hucre.v4 { background: #4d5fbf; }
+.g2048-hucre.v8 { background: #f4a261; color: #111; }
+.g2048-hucre.v16 { background: #f08c47; color: #111; }
+.g2048-hucre.v32 { background: #ef6f4a; color: #111; }
+.g2048-hucre.v64 { background: #e63946; }
+.g2048-hucre.v128 { background: #ffd166; color: #111; font-size: 1.35rem; }
+.g2048-hucre.v256 { background: #ffc233; color: #111; font-size: 1.35rem; }
+.g2048-hucre.v512 { background: #ffb703; color: #111; font-size: 1.35rem; }
+.g2048-hucre.v1024 { background: #2dc653; color: #111; font-size: 1.1rem; }
+.g2048-hucre.v2048 { background: #4cc9f0; color: #111; font-size: 1.1rem; }
+.g2048-hucre.vbuyuk { background: #fff; color: #111; font-size: .95rem; }
+
+/* ---- Matematik Hızı ---- */
+.mt-soru { font-size: 2.2rem; font-weight: 800; margin: 16px 0; min-height: 52px; }
+.mt-secenekler {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  max-width: 320px; margin: 0 auto 12px;
+}
+button.mt-sec {
+  height: 60px; border: 0; border-radius: 12px;
+  background: var(--panel-2); color: var(--text);
+  font-size: 1.4rem; font-weight: 700; cursor: pointer;
+}
+button.mt-sec:active { background: #3a3f6b; }
+
+/* ---- Renk Dizisi ---- */
+.simon-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  max-width: 300px; margin: 0 auto 16px;
+}
+button.simon-pad {
+  aspect-ratio: 1; border: 0; border-radius: 16px;
+  opacity: .4; cursor: pointer; transition: opacity .1s, transform .1s;
+}
+button.simon-pad.p0 { background: #e63946; }
+button.simon-pad.p1 { background: #4cc9f0; }
+button.simon-pad.p2 { background: #2dc653; }
+button.simon-pad.p3 { background: #ffb703; }
+button.simon-pad.yan { opacity: 1; transform: scale(1.04); }
+
+/* ---- Balon Patlat ---- */
+.balon-tuval {
+  display: block; margin: 0 auto 16px;
+  width: min(100%, 340px); height: auto; aspect-ratio: 3 / 4;
+  border-radius: 12px; border: 2px solid var(--panel-2);
+}
+
+/* Kaydırma ve dokunma alanlarında sayfa kaymasın / yakınlaşmasın */
+.yilan-tuval, .balon-tuval, .g2048-tahta { touch-action: none !important; }
+
 /* ---- Metin sayfaları (Hakkında, Gizlilik, İletişim) ---- */
 .icerik { max-width: 760px; padding: 40px 0 8px; }
 .icerik h1 { font-size: 1.9rem; margin-bottom: 8px; }

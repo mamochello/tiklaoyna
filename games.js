@@ -33,6 +33,38 @@ const GAMES = [
     category: "Klasik",
     description: "Yemleri ye, uzun ol, duvara ve kendine çarpma!",
     script: "oyunlar/yilan.js"
+  },
+  {
+    id: "2048",
+    title: "2048",
+    emoji: "🔢",
+    category: "Bulmaca",
+    description: "Kaydır, aynı sayıları birleştir ve 2048'e ulaş!",
+    script: "oyunlar/2048.js"
+  },
+  {
+    id: "matematik-hizi",
+    title: "Matematik Hızı",
+    emoji: "➕",
+    category: "Matematik",
+    description: "30 saniyede kaç işlemi doğru çözebilirsin?",
+    script: "oyunlar/matematik-hizi.js"
+  },
+  {
+    id: "renk-dizisi",
+    title: "Renk Dizisi",
+    emoji: "🎨",
+    category: "Hafıza",
+    description: "Yanan renkleri sırayla aklında tut ve tekrar et.",
+    script: "oyunlar/renk-dizisi.js"
+  },
+  {
+    id: "balon-patlat",
+    title: "Balon Patlat",
+    emoji: "🎈",
+    category: "Refleks",
+    description: "30 saniyede yükselen balonları patlat. Küçük balon 2 puan!",
+    script: "oyunlar/balon-patlat.js"
   }
 ];
 
