@@ -256,3 +256,19 @@ footer.site {
   button.kb-tus { height: 48px; font-size: .85rem; }
   button.kb-tus.genis { font-size: .7rem; }
 }
+
+/* --- AdSense hazırlığı: içerik bölümleri --- */
+.breadcrumb { font-size: .9rem; color: var(--muted); padding: 18px 0 0; }
+.breadcrumb a { color: var(--accent-2); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.oyun-bilgi, .tanitim { max-width: 760px; margin: 32px auto 0; padding: 0; }
+.icerik ol { padding-left: 22px; margin-bottom: 12px; }
+.icerik ol li { margin-bottom: 8px; }
+details.sss { background: var(--panel); border-radius: 12px; margin-bottom: 10px; padding: 0 16px; }
+details.sss summary { cursor: pointer; padding: 14px 0; font-weight: 600; color: var(--text); }
+details.sss p { margin: 0 0 14px; color: #dfe2ff; }
+.ozellik-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.ozellik { background: var(--panel); border-radius: 14px; padding: 18px; }
+.ozellik h3 { font-size: 1rem; margin-bottom: 6px; }
+.ozellik p { color: var(--muted); font-size: .92rem; }
+.icerik .grid { margin: 16px 0; }

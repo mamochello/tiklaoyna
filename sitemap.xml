@@ -2,50 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.tiklaoyna.com/</loc>
-    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://www.tiklaoyna.com/hakkinda.html</loc>
-    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://www.tiklaoyna.com/gizlilik.html</loc>
-    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://www.tiklaoyna.com/iletisim.html</loc>
-    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
-    <loc>https://www.tiklaoyna.com/oyun.html?id=tikla-hizi</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.tiklaoyna.com/oyun/tikla-hizi.html</loc>
   </url>
   <url>
-    <loc>https://www.tiklaoyna.com/oyun.html?id=hafiza-kartlari</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.tiklaoyna.com/oyun/hafiza-kartlari.html</loc>
   </url>
   <url>
-    <loc>https://www.tiklaoyna.com/oyun.html?id=kelime-bulmaca</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.tiklaoyna.com/oyun/kelime-bulmaca.html</loc>
   </url>
   <url>
-    <loc>https://www.tiklaoyna.com/oyun.html?id=yilan</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.tiklaoyna.com/oyun/yilan.html</loc>
   </url>
   <url>
-    <loc>https://www.tiklaoyna.com/oyun.html?id=2048</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.tiklaoyna.com/oyun/2048.html</loc>
   </url>
   <url>
-    <loc>https://www.tiklaoyna.com/oyun.html?id=matematik-hizi</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.tiklaoyna.com/oyun/matematik-hizi.html</loc>
   </url>
   <url>
-    <loc>https://www.tiklaoyna.com/oyun.html?id=renk-dizisi</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.tiklaoyna.com/oyun/renk-dizisi.html</loc>
   </url>
   <url>
-    <loc>https://www.tiklaoyna.com/oyun.html?id=balon-patlat</loc>
-    <lastmod>2026-10-09</lastmod>
+    <loc>https://www.tiklaoyna.com/oyun/balon-patlat.html</loc>
   </url>
 </urlset>

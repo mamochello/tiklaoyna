@@ -4,58 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Oyun – Tıklaoyna</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Tıklaoyna oyun sayfası.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tıklaoyna">
+  <meta property="og:title" content="Oyun – Tıklaoyna">
+  <meta property="og:description" content="Tıklaoyna oyun sayfası.">
+  <meta property="og:url" content="https://www.tiklaoyna.com/oyun.html">
+  <meta property="og:image" content="https://www.tiklaoyna.com/og-image.png">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 
 <header class="site">
   <div class="container">
-    <a href="index.html" class="logo">Tıkla<span>oyna</span></a>
+    <a href="/" class="logo">Tıkla<span>oyna</span></a>
     <nav>
-      <a href="index.html">Oyunlar</a>
+      <a href="/">Oyunlar</a>
     </nav>
   </div>
 </header>
 
-<main class="container game-wrap">
-  <div class="ad-slot">Reklam alanı</div>
-
-  <!-- Oyun buraya yüklenir -->
-  <div class="game-box" id="oyun-alani">
-    <p>Oyun yükleniyor…</p>
-  </div>
-
-  <div class="ad-slot">Reklam alanı</div>
-
-  <p style="text-align:center"><a href="index.html" style="color:var(--accent-2)">← Tüm oyunlara dön</a></p>
+<main class="container icerik">
+  <h1>Yönlendiriliyorsun…</h1>
+  <p>Otomatik yönlendirme çalışmazsa <a href="/">ana sayfaya</a> dön.</p>
 </main>
 
 <footer class="site">
   <div class="container">
     <div class="footer-links">
-      <a href="hakkinda.html">Hakkında</a>
-      <a href="gizlilik.html">Gizlilik Politikası</a>
-      <a href="iletisim.html">İletişim</a>
+      <a href="/hakkinda.html">Hakkında</a>
+      <a href="/gizlilik.html">Gizlilik Politikası</a>
+      <a href="/iletisim.html">İletişim</a>
     </div>
     © 2026 Tıklaoyna. Tüm hakları saklıdır.
   </div>
 </footer>
 
-<script src="games.js"></script>
 <script>
-  const id = new URLSearchParams(location.search).get("id");
-  const oyun = GAMES.find(g => g.id === id);
-  const alan = document.getElementById("oyun-alani");
-
-  if (!oyun) {
-    alan.innerHTML = "<h1>Oyun bulunamadı</h1><p class='desc'>Ana sayfadan başka bir oyun seçebilirsin.</p>";
-  } else {
-    document.title = oyun.title + " – Tıklaoyna";
-    alan.innerHTML = `<h1>${oyun.emoji} ${oyun.title}</h1><p class="desc">${oyun.description}</p><div id="oyun"></div>`;
-    const s = document.createElement("script");
-    s.src = oyun.script;
-    document.body.appendChild(s);
-  }
+  var id = new URLSearchParams(location.search).get("id");
+  var ids = ["tikla-hizi", "hafiza-kartlari", "kelime-bulmaca", "yilan", "2048", "matematik-hizi", "renk-dizisi", "balon-patlat"];
+  location.replace(ids.indexOf(id) >= 0 ? "/oyun/" + id + ".html" : "/");
 </script>
 </body>
 </html>
