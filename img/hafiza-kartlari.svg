@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" role="img" aria-hidden="true">
+<defs><linearGradient id="ghafizakartlari" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b2a8c"/><stop offset="1" stop-color="#b44fe0"/></linearGradient></defs>
+<rect width="240" height="150" fill="url(#ghafizakartlari)"/>
+<circle cx="205" cy="20" r="46" fill="#fff" opacity=".08"/><circle cx="26" cy="140" r="38" fill="#fff" opacity=".08"/>
+
+<g transform="rotate(-10 84 80)"><rect x="46" y="28" width="78" height="104" rx="12" fill="#5b3fd0" stroke="#fff" stroke-width="4"/>
+<rect x="56" y="38" width="58" height="84" rx="8" fill="none" stroke="#ffd23f" stroke-width="3" stroke-dasharray="6 5"/>
+<text x="85" y="95" font-family="Arial Black,Arial,sans-serif" font-weight="900" text-anchor="middle" font-size="44" fill="#ffd23f">?</text></g>
+<g transform="rotate(9 160 80)"><rect x="118" y="24" width="84" height="108" rx="12" fill="#fff" stroke="#fff" stroke-width="4"/>
+<circle cx="145" cy="88" r="17" fill="#e63946"/><circle cx="173" cy="88" r="17" fill="#e63946"/>
+<path d="M145 72q10-30 28 16M159 52q10-10 22-6" stroke="#2dc653" stroke-width="5" fill="none" stroke-linecap="round"/>
+<ellipse cx="164" cy="48" rx="12" ry="6" fill="#2dc653" transform="rotate(-25 164 48)"/></g>
+</svg>

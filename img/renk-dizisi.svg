@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 150" role="img" aria-hidden="true">
+<defs><linearGradient id="grenkdizisi" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b2a8c"/><stop offset="1" stop-color="#7b4fe0"/></linearGradient></defs>
+<rect width="240" height="150" fill="url(#grenkdizisi)"/>
+<circle cx="205" cy="20" r="46" fill="#fff" opacity=".08"/><circle cx="26" cy="140" r="38" fill="#fff" opacity=".08"/>
+
+<circle cx="120" cy="76" r="62" fill="#1c1450"/>
+<path d="M120 76V20A56 56 0 0 1 176 76z" fill="#2dc653"/>
+<path d="M120 76H176A56 56 0 0 1 120 132z" fill="#4cc9f0"/>
+<path d="M120 76V132A56 56 0 0 1 64 76z" fill="#ffd23f"/>
+<path d="M120 76H64A56 56 0 0 1 120 20z" fill="#ff3b4e"/>
+<path d="M120 20A56 56 0 0 1 176 76H120z" fill="#8bf5a3"/>
+<g stroke="#1c1450" stroke-width="6"><path d="M120 18V134M62 76H178"/></g>
+<circle cx="120" cy="76" r="16" fill="#1c1450"/><circle cx="120" cy="76" r="8" fill="#ffb703"/>
+</svg>
