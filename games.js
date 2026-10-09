@@ -65,6 +65,38 @@ const GAMES = [
     category: "Refleks",
     description: "30 saniyede yükselen balonları patlat. Küçük balon 2 puan!",
     script: "oyunlar/balon-patlat.js"
+  },
+  {
+    id: "reaksiyon-testi",
+    title: "Reaksiyon Testi",
+    emoji: "🚦",
+    category: "Refleks",
+    description: "Ekran yeşile dönünce hemen dokun. Tepki süren kaç milisaniye?",
+    script: "oyunlar/reaksiyon-testi.js"
+  },
+  {
+    id: "mayin-tarlasi",
+    title: "Mayın Tarlası",
+    emoji: "💣",
+    category: "Bulmaca",
+    description: "Sayılara bakarak mayınları tahmin et ve tüm güvenli kareleri aç.",
+    script: "oyunlar/mayin-tarlasi.js"
+  },
+  {
+    id: "dort-bagla",
+    title: "Dört Bağla",
+    emoji: "🔴",
+    category: "Strateji",
+    description: "Bilgisayardan önce dört taşı yan yana getir.",
+    script: "oyunlar/dort-bagla.js"
+  },
+  {
+    id: "xox",
+    title: "XOX",
+    emoji: "❌",
+    category: "Strateji",
+    description: "Klasik üç taş oyunu. Kolay ya da zor seviyede bilgisayara karşı oyna.",
+    script: "oyunlar/xox.js"
   }
 ];
 

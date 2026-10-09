@@ -275,3 +275,34 @@ details.sss p { margin: 0 0 14px; color: #dfe2ff; }
 .oyna-cagri { background: var(--panel); border-radius: 14px; padding: 18px; margin: 28px 0; text-align: center; }
 .oyna-cagri p { margin-bottom: 10px; }
 .icerik a.btn-oyna { display: inline-block; background: var(--accent); color: #1a1a1a; font-weight: 700; padding: 12px 22px; border-radius: 999px; text-decoration: none; }
+
+/* ---- Reaksiyon Testi ---- */
+.rt-alan { display:block; width:100%; max-width:420px; height:200px; margin:0 auto 12px; border:0; border-radius:16px; font-size:1.4rem; font-weight:800; color:#fff; cursor:pointer; }
+.rt-bekle { background: var(--panel-2); }
+.rt-kirmizi { background: #d62839; }
+.rt-yesil { background: #2dc653; color:#111; }
+
+/* ---- XOX ---- */
+.x-tahta { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; max-width:300px; margin:0 auto 14px; }
+.x-hucre { aspect-ratio:1; border:0; border-radius:12px; background:var(--panel-2); font-size:2.6rem; font-weight:800; color:var(--text); cursor:pointer; }
+.x-hucre.x { color: var(--accent-2); }
+.x-hucre.o { color: var(--accent); }
+.x-hucre.kazan { background:#2dc653; color:#111; }
+.x-zorluk, .m-mod { display:flex; justify-content:center; gap:8px; margin-bottom:6px; }
+.x-z, .m-m { background:var(--panel-2); color:var(--muted); border:0; border-radius:999px; padding:8px 18px; font-weight:700; cursor:pointer; }
+.x-z.secili, .m-m.secili { background:var(--accent-2); color:#111; }
+
+/* ---- Dört Bağla ---- */
+.d-tahta { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; max-width:380px; margin:0 auto 14px; background:#2a3070; padding:8px; border-radius:14px; }
+.d-hucre { aspect-ratio:1; border:0; border-radius:50%; background:var(--bg); cursor:pointer; padding:0; }
+.d-hucre.k { background:#e63946; }
+.d-hucre.s { background:#ffd23f; }
+.d-hucre.kazan { box-shadow:0 0 0 3px #fff inset; }
+
+/* ---- Mayın Tarlası ---- */
+.m-tahta { display:grid; grid-template-columns:repeat(9,1fr); gap:3px; max-width:360px; margin:0 auto 12px; }
+.m-hucre { aspect-ratio:1; border:0; border-radius:6px; background:var(--panel-2); color:var(--text); font-size:1rem; font-weight:800; cursor:pointer; padding:0; }
+.m-hucre.acik { background:#0f1226; cursor:default; }
+.m-hucre.patladi { background:#d62839; }
+.m-hucre.n1 { color:#4cc9f0; } .m-hucre.n2 { color:#2dc653; } .m-hucre.n3 { color:#ff6b6b; }
+.m-hucre.n4 { color:#b388ff; } .m-hucre.n5, .m-hucre.n6, .m-hucre.n7, .m-hucre.n8 { color:#ffb703; }
