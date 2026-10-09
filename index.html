@@ -38,8 +38,9 @@
   </section>
 
   <h2 class="section">Tüm Oyunlar</h2>
-  <div class="grid">
-    <a class="card" href="/oyun/tikla-hizi.html">
+  <div class="filtre" id="filtre" hidden></div>
+  <div class="grid" id="oyun-grid">
+    <a class="card" href="/oyun/tikla-hizi.html" data-kat="Refleks">
       <div class="thumb">⚡</div>
       <div class="body">
         <h3>Tıkla Hızı</h3>
@@ -47,7 +48,7 @@
         <span class="tag">Refleks</span>
       </div>
     </a>
-    <a class="card" href="/oyun/hafiza-kartlari.html">
+    <a class="card" href="/oyun/hafiza-kartlari.html" data-kat="Hafıza">
       <div class="thumb">🃏</div>
       <div class="body">
         <h3>Hafıza Kartları</h3>
@@ -55,7 +56,7 @@
         <span class="tag">Hafıza</span>
       </div>
     </a>
-    <a class="card" href="/oyun/kelime-bulmaca.html">
+    <a class="card" href="/oyun/kelime-bulmaca.html" data-kat="Kelime">
       <div class="thumb">🔤</div>
       <div class="body">
         <h3>Kelime Bulmaca</h3>
@@ -63,7 +64,7 @@
         <span class="tag">Kelime</span>
       </div>
     </a>
-    <a class="card" href="/oyun/yilan.html">
+    <a class="card" href="/oyun/yilan.html" data-kat="Klasik">
       <div class="thumb">🐍</div>
       <div class="body">
         <h3>Yılan</h3>
@@ -71,7 +72,7 @@
         <span class="tag">Klasik</span>
       </div>
     </a>
-    <a class="card" href="/oyun/2048.html">
+    <a class="card" href="/oyun/2048.html" data-kat="Bulmaca">
       <div class="thumb">🔢</div>
       <div class="body">
         <h3>2048</h3>
@@ -79,7 +80,7 @@
         <span class="tag">Bulmaca</span>
       </div>
     </a>
-    <a class="card" href="/oyun/matematik-hizi.html">
+    <a class="card" href="/oyun/matematik-hizi.html" data-kat="Matematik">
       <div class="thumb">➕</div>
       <div class="body">
         <h3>Matematik Hızı</h3>
@@ -87,7 +88,7 @@
         <span class="tag">Matematik</span>
       </div>
     </a>
-    <a class="card" href="/oyun/renk-dizisi.html">
+    <a class="card" href="/oyun/renk-dizisi.html" data-kat="Hafıza">
       <div class="thumb">🎨</div>
       <div class="body">
         <h3>Renk Dizisi</h3>
@@ -95,7 +96,7 @@
         <span class="tag">Hafıza</span>
       </div>
     </a>
-    <a class="card" href="/oyun/balon-patlat.html">
+    <a class="card" href="/oyun/balon-patlat.html" data-kat="Refleks">
       <div class="thumb">🎈</div>
       <div class="body">
         <h3>Balon Patlat</h3>
@@ -103,32 +104,32 @@
         <span class="tag">Refleks</span>
       </div>
     </a>
-    <a class="card" href="/oyun/reaksiyon-testi.html">
-      <div class="thumb">🚦</div>
+    <a class="card" href="/oyun/reaksiyon-testi.html" data-kat="Refleks">
+      <div class="thumb"><span class="yeni">YENİ</span>🚦</div>
       <div class="body">
         <h3>Reaksiyon Testi</h3>
         <p>Ekran yeşile dönünce hemen dokun. Tepki süren kaç milisaniye?</p>
         <span class="tag">Refleks</span>
       </div>
     </a>
-    <a class="card" href="/oyun/mayin-tarlasi.html">
-      <div class="thumb">💣</div>
+    <a class="card" href="/oyun/mayin-tarlasi.html" data-kat="Bulmaca">
+      <div class="thumb"><span class="yeni">YENİ</span>💣</div>
       <div class="body">
         <h3>Mayın Tarlası</h3>
         <p>Sayılara bakarak mayınları tahmin et ve tüm güvenli kareleri aç.</p>
         <span class="tag">Bulmaca</span>
       </div>
     </a>
-    <a class="card" href="/oyun/dort-bagla.html">
-      <div class="thumb">🔴</div>
+    <a class="card" href="/oyun/dort-bagla.html" data-kat="Strateji">
+      <div class="thumb"><span class="yeni">YENİ</span>🔴</div>
       <div class="body">
         <h3>Dört Bağla</h3>
         <p>Bilgisayardan önce dört taşı yan yana getir.</p>
         <span class="tag">Strateji</span>
       </div>
     </a>
-    <a class="card" href="/oyun/xox.html">
-      <div class="thumb">❌</div>
+    <a class="card" href="/oyun/xox.html" data-kat="Strateji">
+      <div class="thumb"><span class="yeni">YENİ</span>❌</div>
       <div class="body">
         <h3>XOX</h3>
         <p>Klasik üç taş oyunu. Kolay ya da zor seviyede bilgisayara karşı oyna.</p>
@@ -188,5 +189,26 @@
   </div>
 </footer>
 
+<script>
+(function () {
+  var f = document.getElementById("filtre"), g = document.getElementById("oyun-grid");
+  if (!f || !g) return;
+  var kartlar = Array.prototype.slice.call(g.querySelectorAll(".card"));
+  var kats = ["Tümü"];
+  kartlar.forEach(function (k) { var c = k.getAttribute("data-kat"); if (kats.indexOf(c) < 0) kats.push(c); });
+  kats.forEach(function (c, i) {
+    var b = document.createElement("button");
+    b.type = "button"; b.textContent = c;
+    if (i === 0) b.className = "secili";
+    b.addEventListener("click", function () {
+      Array.prototype.forEach.call(f.children, function (x) { x.className = ""; });
+      b.className = "secili";
+      kartlar.forEach(function (k) { k.hidden = !(c === "Tümü" || k.getAttribute("data-kat") === c); });
+    });
+    f.appendChild(b);
+  });
+  f.hidden = false;
+})();
+</script>
 </body>
 </html>
