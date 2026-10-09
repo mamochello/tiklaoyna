@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2048 Oyununda Kazanma Stratejileri | Tıklaoyna</title>
+  <meta name="description" content="2048&#x27;e ulaşmak için işe yarayan köşe stratejisi, hamle sırası ve sık yapılan hatalar. Adım adım rehber.">
+  <link rel="canonical" href="https://www.tiklaoyna.com/rehber/2048-stratejileri.html">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Tıklaoyna">
+  <meta property="og:title" content="2048 Oyununda Kazanma Stratejileri | Tıklaoyna">
+  <meta property="og:description" content="2048&#x27;e ulaşmak için işe yarayan köşe stratejisi, hamle sırası ve sık yapılan hatalar. Adım adım rehber.">
+  <meta property="og:url" content="https://www.tiklaoyna.com/rehber/2048-stratejileri.html">
+  <meta property="og:image" content="https://www.tiklaoyna.com/og-image.png">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="container">
+    <a href="/" class="logo">Tıkla<span>oyna</span></a>
+    <nav>
+      <a href="/">Oyunlar</a>
+      <a href="/rehber/">Rehber</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container icerik">
+  <nav class="breadcrumb" aria-label="Sayfa yolu"><a href="/">Ana Sayfa</a> › <a href="/rehber/">Rehber</a> › <span>2048 Oyununda Kazanma Stratejileri</span></nav>
+  <h1>2048 Oyununda Kazanma Stratejileri</h1>
+  <p class="tarih">Tıklaoyna Rehber · Son güncelleme: 9 Ekim 2026</p>
+    <h2>Önce temel mantığı kavra</h2>
+    <p>2048&#x27;de her hamle tahtadaki tüm kutuları aynı yöne kaydırır. Aynı değerdeki iki kutu birleşir ve değeri iki katına çıkar. Rastgele kaydırmak başlangıçta işe yarar ama tahta dolmaya başladığında oyunu kaybettirir. Bu yüzden bir plan gerekir.</p>
+    <p>Plan çok basit: en büyük kutuyu bir köşeye yerleştir ve oyun boyunca orada tut. Diğer kutular bu köşenin etrafında düzenli bir sıra oluşturur.</p>
+    <h2>Köşe stratejisi</h2>
+    <p>Bir köşe seç, örneğin sol alt. Büyük kutu orada kalsın. Bunun için çoğunlukla sola ve aşağı hamle yap. Sağa hamleyi yalnızca başka seçeneğin kalmadığında kullan. Yukarı hamle ise büyük kutuyu köşeden çıkarabileceği için en son çare olmalı.</p>
+    <p>Alt satırı en büyük sayıdan küçüğe doğru dolu tutmaya çalış. Alt satır dolu ve sıralıysa, kutular birleştikçe zincirleme olarak büyür.</p>
+    <h2>Sayıları sıralı tut</h2>
+    <p>İyi oyuncular tahtayı yılan gibi düzenler: alt satırda soldan sağa büyükten küçüğe, bir üst satırda ise tersi yönde. Bu sıra sayesinde art arda birleşmeler olur ve alan açılır.</p>
+    <p>Yan yana duran ama birleşemeyen farklı değerler (örneğin 8 ile 32) en büyük sorundur. Bunlar sıranın içine girmeden önce küçük kutuları birleştirip aradaki boşluğu kapat.</p>
+    <h2>Sık yapılan hatalar</h2>
+    <p>Telaşla art arda aynı yönü ya da yönleri değiştirerek kaydırmak, en büyük kutuyu köşeden çıkarır. Her hamleden önce tahtaya bir saniye bak.</p>
+    <p>Küçük kutuları tahtanın her yerine dağıtmak da hata. Küçük kutuları tek bir bölgede topla ve birleştir.</p>
+    <p>2048&#x27;e ulaştıktan sonra oyuna devam edebilirsin. Aynı stratejiyle 4096 ve ötesine gitmek mümkün.</p>
+
+  <div class="oyna-cagri">
+    <p>Öğrendiklerini denemek ister misin?</p>
+    <a class="btn-oyna" href="/oyun/2048.html">🔢 2048 oyna</a>
+  </div>
+
+  <h2>Diğer rehberler</h2>
+  <ul>
+      <li><a href="/rehber/kelime-bulmaca-ipuclari.html">Kelime Bulmaca İçin İpuçları: Daha Az Denemede Çöz</a></li>
+      <li><a href="/rehber/tiklama-hizi-nasil-artirilir.html">Tıklama Hızını Artırmanın Yolları</a></li>
+      <li><a href="/rehber/zihinden-islem-hizlandirma.html">Zihinden İşlem Hızını Artırma Yöntemleri</a></li>
+  </ul>
+  <p><a href="/rehber/" class="geri">← Tüm rehberler</a></p>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <div class="footer-links">
+      <a href="/rehber/">Rehber</a>
+      <a href="/hakkinda.html">Hakkında</a>
+      <a href="/gizlilik.html">Gizlilik Politikası</a>
+      <a href="/iletisim.html">İletişim</a>
+    </div>
+    © 2026 Tıklaoyna. Tüm hakları saklıdır.
+  </div>
+</footer>
+
+</body>
+</html>

@@ -272,3 +272,6 @@ details.sss p { margin: 0 0 14px; color: #dfe2ff; }
 .ozellik h3 { font-size: 1rem; margin-bottom: 6px; }
 .ozellik p { color: var(--muted); font-size: .92rem; }
 .icerik .grid { margin: 16px 0; }
+.oyna-cagri { background: var(--panel); border-radius: 14px; padding: 18px; margin: 28px 0; text-align: center; }
+.oyna-cagri p { margin-bottom: 10px; }
+.icerik a.btn-oyna { display: inline-block; background: var(--accent); color: #1a1a1a; font-weight: 700; padding: 12px 22px; border-radius: 999px; text-decoration: none; }
