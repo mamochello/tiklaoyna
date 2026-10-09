@@ -306,3 +306,11 @@ details.sss p { margin: 0 0 14px; color: #dfe2ff; }
 .m-hucre.patladi { background:#d62839; }
 .m-hucre.n1 { color:#4cc9f0; } .m-hucre.n2 { color:#2dc653; } .m-hucre.n3 { color:#ff6b6b; }
 .m-hucre.n4 { color:#b388ff; } .m-hucre.n5, .m-hucre.n6, .m-hucre.n7, .m-hucre.n8 { color:#ffb703; }
+
+/* ---- Filtre ve etiket ---- */
+.filtre { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+.filtre[hidden], .card[hidden] { display:none; }
+.filtre button { background:var(--panel); color:var(--muted); border:0; border-radius:999px; padding:8px 16px; font-weight:700; font-size:.95rem; cursor:pointer; }
+.filtre button.secili { background:var(--accent-2); color:#111; }
+.card .thumb { position:relative; }
+.yeni { position:absolute; top:10px; right:10px; background:var(--accent); color:#1b1b1b; font-size:.7rem; font-weight:800; padding:3px 8px; border-radius:999px; }
