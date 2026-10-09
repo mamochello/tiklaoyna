@@ -314,3 +314,57 @@ details.sss p { margin: 0 0 14px; color: #dfe2ff; }
 .filtre button.secili { background:var(--accent-2); color:#111; }
 .card .thumb { position:relative; }
 .yeni { position:absolute; top:10px; right:10px; background:var(--accent); color:#1b1b1b; font-size:.7rem; font-weight:800; padding:3px 8px; border-radius:999px; }
+
+/* ================= Görünüm iyileştirmeleri ================= */
+html { scroll-behavior: smooth; }
+body { background: radial-gradient(1200px 500px at 50% -120px, #1d2260 0%, var(--bg) 60%) no-repeat, var(--bg); }
+
+header.site { background: rgba(25,29,58,.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+nav a { margin-left: 8px; padding: 6px 12px; border-radius: 999px; transition: background .15s, color .15s; }
+nav a:hover { background: var(--panel-2); }
+
+.hero { padding: 64px 0 28px; }
+.hero h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); letter-spacing: -.5px; line-height: 1.1; }
+.hero .vurgu { color: var(--accent); }
+.hero p { font-size: 1.05rem; }
+.hero-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 22px 0 22px; }
+.hero-chips span { background: var(--panel); border: 1px solid var(--panel-2); border-radius: 999px; padding: 6px 14px; font-size: .9rem; color: var(--text); }
+.hero-btn { display: inline-block; background: var(--accent); color: #1b1b1b; font-weight: 800; padding: 14px 30px; border-radius: 999px; box-shadow: 0 8px 22px rgba(255,183,3,.25); transition: transform .12s; }
+.hero-btn:hover { transform: translateY(-2px); }
+
+h2.section { display: flex; align-items: center; gap: 10px; }
+h2.section::before { content: ""; width: 5px; height: 1.1em; background: var(--accent); border-radius: 3px; }
+
+.card { border: 1px solid var(--panel-2); }
+.card:hover { border-color: var(--accent-2); box-shadow: 0 12px 28px rgba(0,0,0,.45); }
+.card .thumb { height: 140px; font-size: 3.6rem; background: linear-gradient(135deg, var(--c1, #222754), var(--c2, #3a2f7a)); }
+.card .thumb { text-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.card[data-kat="Refleks"]   { --c1:#7a1f2e; --c2:#d6453d; }
+.card[data-kat="Hafıza"]    { --c1:#3b2a8c; --c2:#7b4fe0; }
+.card[data-kat="Kelime"]    { --c1:#0f5a43; --c2:#2dc653; }
+.card[data-kat="Klasik"]    { --c1:#0b5563; --c2:#1fb5b0; }
+.card[data-kat="Bulmaca"]   { --c1:#8a4a06; --c2:#f0a024; }
+.card[data-kat="Matematik"] { --c1:#16427a; --c2:#3a8ef0; }
+.card[data-kat="Strateji"]  { --c1:#7a1f5e; --c2:#e0489c; }
+.card .body { position: relative; }
+.card .oyna { float: right; margin-top: 10px; font-size: .8rem; font-weight: 800; color: var(--accent); opacity: .85; }
+.card:hover .oyna { opacity: 1; }
+
+.game-box { border: 1px solid var(--panel-2); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.game-box h1 { font-size: clamp(1.6rem, 5vw, 2.1rem); }
+
+footer.site { border-top: 1px solid var(--panel-2); margin-top: 48px; }
+.ozellik { border: 1px solid var(--panel-2); }
+details.sss[open] { border: 1px solid var(--accent-2); }
+
+/* Telefonda oyun kartları 2 sütun */
+@media (max-width: 520px) {
+  .grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .card .thumb { height: 96px; font-size: 2.6rem; }
+  .card .body { padding: 10px 12px 14px; }
+  .card h3 { font-size: .95rem; }
+  .card p { font-size: .78rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .card .oyna { display: none; }
+  .yeni { top: 6px; right: 6px; font-size: .62rem; }
+  .hero { padding-top: 40px; }
+}
