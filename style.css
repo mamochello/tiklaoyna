@@ -441,3 +441,15 @@ h2.section::before { background: linear-gradient(var(--pembe), var(--accent)); }
 .icerik h2 { color: var(--accent); }
 .icerik a { color: var(--accent-2); }
 @media (max-width: 520px) { .card .thumb { aspect-ratio: 8 / 5; height: auto; } .card .body { padding: 10px 12px 14px; } }
+
+/* ---- Sıradaki oyun bölümü ---- */
+.siradaki { margin: 28px 0 8px; padding: 18px; border-radius: 18px; border: 2px solid transparent; transition: border-color .3s, background .3s; }
+.siradaki h2.section { margin-top: 0; }
+.siradaki.parla { border-color: var(--accent); background: rgba(255,194,46,.08); animation: parla 1.6s ease-out 1; }
+@keyframes parla { 0% { box-shadow: 0 0 0 0 rgba(255,194,46,.5); } 100% { box-shadow: 0 0 0 18px rgba(255,194,46,0); } }
+.siradaki-not { margin-bottom: 14px; font-weight: 700; color: var(--accent); }
+.siradaki-not[hidden] { display: none; }
+.rastgele-satir { text-align: center; margin-top: 18px; }
+.rastgele { background: var(--panel-2); color: #fff; border: 0; border-radius: 999px; padding: 12px 24px; font-weight: 800; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 0 rgba(0,0,0,.28); }
+.rastgele:hover { background: var(--pembe); }
+@media (prefers-reduced-motion: reduce) { .siradaki.parla { animation: none; } }

@@ -43,6 +43,41 @@
     <noscript><p>Bu oyunu oynamak için tarayıcında JavaScript açık olmalıdır.</p></noscript>
   </div>
 
+  <section class="siradaki" id="siradaki">
+    <h2 class="section">Sıradaki oyun</h2>
+    <p class="siradaki-not" id="siradaki-not" hidden>Güzel tur! Bir tur daha oynayabilir ya da yeni bir oyun deneyebilirsin 👇</p>
+    <div class="grid">
+    <a class="card" href="/oyun/dort-bagla.html" data-kat="Strateji">
+      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/dort-bagla.svg" alt="Dört Bağla oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Dört Bağla</h3>
+        <p>Bilgisayardan önce dört taşı yan yana getir.</p>
+        <span class="tag">Strateji</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/hafiza-kartlari.html" data-kat="Hafıza">
+      <div class="thumb"><img src="/img/hafiza-kartlari.svg" alt="Hafıza Kartları oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Hafıza Kartları</h3>
+        <p>Aynı meyveleri eşleştir. En az hamlede bitirebilir misin?</p>
+        <span class="tag">Hafıza</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/2048.html" data-kat="Bulmaca">
+      <div class="thumb"><img src="/img/2048.svg" alt="2048 oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>2048</h3>
+        <p>Kaydır, aynı sayıları birleştir ve 2048&#x27;e ulaş!</p>
+        <span class="tag">Bulmaca</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    </div>
+    <p class="rastgele-satir"><button type="button" class="rastgele" id="rastgele">🎲 Rastgele bir oyun aç</button></p>
+  </section>
+
   <article class="oyun-bilgi icerik">
     <h2>Mayın Tarlası nedir?</h2>
     <p>Mayın Tarlası, 9×9’luk bir alanda 10 mayını açmadan tüm güvenli kareleri bulmaya çalıştığın klasik bir mantık oyunudur. Karelerdeki sayılar, çevresindeki mayın sayısını gösterir.</p>
@@ -71,39 +106,6 @@
     <p>Mayın Tarlası, olasılık ve mantık yürütmeyi birleştiren bir oyundur. Rekor süren cihazında saklanır. Rekorların yalnızca kendi cihazında saklanır; hesap açmana gerek yoktur.</p>
   </article>
 
-  <section>
-    <h2 class="section">Benzer oyunlar</h2>
-    <div class="grid">
-    <a class="card" href="/oyun/dort-bagla.html" data-kat="Strateji">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/dort-bagla.svg" alt="Dört Bağla oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Dört Bağla</h3>
-        <p>Bilgisayardan önce dört taşı yan yana getir.</p>
-        <span class="tag">Strateji</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/xox.html" data-kat="Strateji">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/xox.svg" alt="XOX oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>XOX</h3>
-        <p>Klasik üç taş oyunu. Kolay ya da zor seviyede bilgisayara karşı oyna.</p>
-        <span class="tag">Strateji</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/tikla-hizi.html" data-kat="Refleks">
-      <div class="thumb"><img src="/img/tikla-hizi.svg" alt="Tıkla Hızı oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Tıkla Hızı</h3>
-        <p>10 saniyede kaç kez tıklayabilirsin? Rekorunu kır!</p>
-        <span class="tag">Refleks</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    </div>
-  </section>
-
   <p style="text-align:center;margin-top:24px"><a href="/" style="color:var(--accent-2)">← Tüm oyunlara dön</a></p>
 </main>
 
@@ -122,5 +124,6 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.tiklaoyna.com/"}, {"@type": "ListItem", "position": 2, "name": "Mayın Tarlası", "item": "https://www.tiklaoyna.com/oyun/mayin-tarlasi.html"}]}</script>
 <script src="/games.js"></script>
 <script src="/oyunlar/mayin-tarlasi.js"></script>
+<script>oyunSonuIzle("mayin-tarlasi");</script>
 </body>
 </html>

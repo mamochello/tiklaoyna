@@ -43,6 +43,41 @@
     <noscript><p>Bu oyunu oynamak için tarayıcında JavaScript açık olmalıdır.</p></noscript>
   </div>
 
+  <section class="siradaki" id="siradaki">
+    <h2 class="section">Sıradaki oyun</h2>
+    <p class="siradaki-not" id="siradaki-not" hidden>Güzel tur! Bir tur daha oynayabilir ya da yeni bir oyun deneyebilirsin 👇</p>
+    <div class="grid">
+    <a class="card" href="/oyun/yilan.html" data-kat="Klasik">
+      <div class="thumb"><img src="/img/yilan.svg" alt="Yılan oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Yılan</h3>
+        <p>Yemleri ye, uzun ol, duvara ve kendine çarpma!</p>
+        <span class="tag">Klasik</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/renk-dizisi.html" data-kat="Hafıza">
+      <div class="thumb"><img src="/img/renk-dizisi.svg" alt="Renk Dizisi oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Renk Dizisi</h3>
+        <p>Yanan renkleri sırayla aklında tut ve tekrar et.</p>
+        <span class="tag">Hafıza</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/mayin-tarlasi.html" data-kat="Bulmaca">
+      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/mayin-tarlasi.svg" alt="Mayın Tarlası oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Mayın Tarlası</h3>
+        <p>Sayılara bakarak mayınları tahmin et ve tüm güvenli kareleri aç.</p>
+        <span class="tag">Bulmaca</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    </div>
+    <p class="rastgele-satir"><button type="button" class="rastgele" id="rastgele">🎲 Rastgele bir oyun aç</button></p>
+  </section>
+
   <article class="oyun-bilgi icerik">
     <h2>Kelime Bulmaca nedir?</h2>
     <p>Kelime Bulmaca, 5 harfli gizli bir Türkçe kelimeyi 6 denemede bulmaya çalıştığın bir kelime tahmin oyunudur. Her tahminden sonra harflerin renkleri sana ipucu verir.</p>
@@ -72,39 +107,6 @@
     <p>Kelime oyunları kelime dağarcığını geliştirir ve mantıksal düşünmeyi destekler. Günün kelimesini arkadaşlarınla karşılaştırmak da işin eğlenceli tarafı. Rekorların yalnızca kendi cihazında saklanır; hesap açmana gerek yoktur.</p>
   </article>
 
-  <section>
-    <h2 class="section">Benzer oyunlar</h2>
-    <div class="grid">
-    <a class="card" href="/oyun/yilan.html" data-kat="Klasik">
-      <div class="thumb"><img src="/img/yilan.svg" alt="Yılan oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Yılan</h3>
-        <p>Yemleri ye, uzun ol, duvara ve kendine çarpma!</p>
-        <span class="tag">Klasik</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/2048.html" data-kat="Bulmaca">
-      <div class="thumb"><img src="/img/2048.svg" alt="2048 oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>2048</h3>
-        <p>Kaydır, aynı sayıları birleştir ve 2048&#x27;e ulaş!</p>
-        <span class="tag">Bulmaca</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/matematik-hizi.html" data-kat="Matematik">
-      <div class="thumb"><img src="/img/matematik-hizi.svg" alt="Matematik Hızı oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Matematik Hızı</h3>
-        <p>30 saniyede kaç işlemi doğru çözebilirsin?</p>
-        <span class="tag">Matematik</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    </div>
-  </section>
-
   <p style="text-align:center;margin-top:24px"><a href="/" style="color:var(--accent-2)">← Tüm oyunlara dön</a></p>
 </main>
 
@@ -123,5 +125,6 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.tiklaoyna.com/"}, {"@type": "ListItem", "position": 2, "name": "Kelime Bulmaca", "item": "https://www.tiklaoyna.com/oyun/kelime-bulmaca.html"}]}</script>
 <script src="/games.js"></script>
 <script src="/oyunlar/kelime-bulmaca.js"></script>
+<script>oyunSonuIzle("kelime-bulmaca");</script>
 </body>
 </html>

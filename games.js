@@ -118,3 +118,39 @@ function hizliTikla(el, fn) {
     if (!hareket) fn(e);
   }, { passive: false });
 }
+
+
+// Oyun bitince "Sıradaki oyun" bölümünü vurgular ve rastgele oyun düğmesini bağlar.
+// Reklam göstermez, sayfayı kaydırmaz ve oyunun üstüne bir şey eklemez.
+function oyunSonuIzle(mevcutId) {
+  var oyun = document.getElementById("oyun");
+  var bolum = document.getElementById("siradaki");
+  var not = document.getElementById("siradaki-not");
+  var rast = document.getElementById("rastgele");
+  if (rast) {
+    hizliTikla(rast, function () {
+      var diger = GAMES.filter(function (g) { return g.id !== mevcutId; });
+      var sec = diger[Math.floor(Math.random() * diger.length)];
+      location.href = "/oyun/" + sec.id + ".html";
+    });
+  }
+  if (!oyun || !bolum || !window.MutationObserver) return;
+  var bitisYazisi = /Süre doldu|Oyun bitti|Tebrik|Kazandın|kazandı|Berabere|Mayına bastın|Olmadı|Yanlış renk|Tekrar oyna|tekrar için dokun|Çok erken/i;
+  var gosterildi = false, zamanlayici = null;
+  function kontrol() {
+    var bitti = bitisYazisi.test(oyun.textContent || "");
+    if (bitti && !gosterildi) {
+      gosterildi = true;
+      if (not) not.hidden = false;
+      bolum.classList.add("parla");
+    } else if (!bitti && gosterildi) {
+      gosterildi = false;
+      if (not) not.hidden = true;
+      bolum.classList.remove("parla");
+    }
+  }
+  new MutationObserver(function () {
+    clearTimeout(zamanlayici);
+    zamanlayici = setTimeout(kontrol, 400);
+  }).observe(oyun, { childList: true, subtree: true, characterData: true });
+}

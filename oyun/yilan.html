@@ -43,6 +43,41 @@
     <noscript><p>Bu oyunu oynamak için tarayıcında JavaScript açık olmalıdır.</p></noscript>
   </div>
 
+  <section class="siradaki" id="siradaki">
+    <h2 class="section">Sıradaki oyun</h2>
+    <p class="siradaki-not" id="siradaki-not" hidden>Güzel tur! Bir tur daha oynayabilir ya da yeni bir oyun deneyebilirsin 👇</p>
+    <div class="grid">
+    <a class="card" href="/oyun/2048.html" data-kat="Bulmaca">
+      <div class="thumb"><img src="/img/2048.svg" alt="2048 oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>2048</h3>
+        <p>Kaydır, aynı sayıları birleştir ve 2048&#x27;e ulaş!</p>
+        <span class="tag">Bulmaca</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/balon-patlat.html" data-kat="Refleks">
+      <div class="thumb"><img src="/img/balon-patlat.svg" alt="Balon Patlat oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Balon Patlat</h3>
+        <p>30 saniyede yükselen balonları patlat. Küçük balon 2 puan!</p>
+        <span class="tag">Refleks</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/dort-bagla.html" data-kat="Strateji">
+      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/dort-bagla.svg" alt="Dört Bağla oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Dört Bağla</h3>
+        <p>Bilgisayardan önce dört taşı yan yana getir.</p>
+        <span class="tag">Strateji</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    </div>
+    <p class="rastgele-satir"><button type="button" class="rastgele" id="rastgele">🎲 Rastgele bir oyun aç</button></p>
+  </section>
+
   <article class="oyun-bilgi icerik">
     <h2>Yılan nedir?</h2>
     <p>Yılan, eski cep telefonlarından tanıdığın klasik arcade oyunudur. 15×15’lik bir alanda yılanı yönlendirir, yemleri yer ve uzarsın. Duvara ya da kendi kuyruğuna çarparsan oyun biter.</p>
@@ -71,39 +106,6 @@
     <p>Yılan, oyun tarihinin en çok bilinen oyunlarından biridir. Basit kuralları ve giderek artan zorluğuyla kısa molalar için idealdir. Rekorların yalnızca kendi cihazında saklanır; hesap açmana gerek yoktur.</p>
   </article>
 
-  <section>
-    <h2 class="section">Benzer oyunlar</h2>
-    <div class="grid">
-    <a class="card" href="/oyun/2048.html" data-kat="Bulmaca">
-      <div class="thumb"><img src="/img/2048.svg" alt="2048 oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>2048</h3>
-        <p>Kaydır, aynı sayıları birleştir ve 2048&#x27;e ulaş!</p>
-        <span class="tag">Bulmaca</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/matematik-hizi.html" data-kat="Matematik">
-      <div class="thumb"><img src="/img/matematik-hizi.svg" alt="Matematik Hızı oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Matematik Hızı</h3>
-        <p>30 saniyede kaç işlemi doğru çözebilirsin?</p>
-        <span class="tag">Matematik</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/renk-dizisi.html" data-kat="Hafıza">
-      <div class="thumb"><img src="/img/renk-dizisi.svg" alt="Renk Dizisi oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Renk Dizisi</h3>
-        <p>Yanan renkleri sırayla aklında tut ve tekrar et.</p>
-        <span class="tag">Hafıza</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    </div>
-  </section>
-
   <p style="text-align:center;margin-top:24px"><a href="/" style="color:var(--accent-2)">← Tüm oyunlara dön</a></p>
 </main>
 
@@ -122,5 +124,6 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.tiklaoyna.com/"}, {"@type": "ListItem", "position": 2, "name": "Yılan", "item": "https://www.tiklaoyna.com/oyun/yilan.html"}]}</script>
 <script src="/games.js"></script>
 <script src="/oyunlar/yilan.js"></script>
+<script>oyunSonuIzle("yilan");</script>
 </body>
 </html>

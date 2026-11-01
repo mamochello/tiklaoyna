@@ -43,6 +43,41 @@
     <noscript><p>Bu oyunu oynamak için tarayıcında JavaScript açık olmalıdır.</p></noscript>
   </div>
 
+  <section class="siradaki" id="siradaki">
+    <h2 class="section">Sıradaki oyun</h2>
+    <p class="siradaki-not" id="siradaki-not" hidden>Güzel tur! Bir tur daha oynayabilir ya da yeni bir oyun deneyebilirsin 👇</p>
+    <div class="grid">
+    <a class="card" href="/oyun/renk-dizisi.html" data-kat="Hafıza">
+      <div class="thumb"><img src="/img/renk-dizisi.svg" alt="Renk Dizisi oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Renk Dizisi</h3>
+        <p>Yanan renkleri sırayla aklında tut ve tekrar et.</p>
+        <span class="tag">Hafıza</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/mayin-tarlasi.html" data-kat="Bulmaca">
+      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/mayin-tarlasi.svg" alt="Mayın Tarlası oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Mayın Tarlası</h3>
+        <p>Sayılara bakarak mayınları tahmin et ve tüm güvenli kareleri aç.</p>
+        <span class="tag">Bulmaca</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/tikla-hizi.html" data-kat="Refleks">
+      <div class="thumb"><img src="/img/tikla-hizi.svg" alt="Tıkla Hızı oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Tıkla Hızı</h3>
+        <p>10 saniyede kaç kez tıklayabilirsin? Rekorunu kır!</p>
+        <span class="tag">Refleks</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    </div>
+    <p class="rastgele-satir"><button type="button" class="rastgele" id="rastgele">🎲 Rastgele bir oyun aç</button></p>
+  </section>
+
   <article class="oyun-bilgi icerik">
     <h2>Matematik Hızı nedir?</h2>
     <p>Matematik Hızı, 30 saniyede kaç işlemi doğru çözebileceğini ölçen bir zihinden işlem oyunudur. Toplama, çıkarma ve çarpma soruları gelir ve 4 seçenekten doğru olanı seçersin.</p>
@@ -71,39 +106,6 @@
     <p>Günlük kısa pratikler zihinden işlem hızını geliştirir. Hem öğrenciler hem yetişkinler için eğlenceli bir zihin egzersizidir. Rekorların yalnızca kendi cihazında saklanır; hesap açmana gerek yoktur.</p>
   </article>
 
-  <section>
-    <h2 class="section">Benzer oyunlar</h2>
-    <div class="grid">
-    <a class="card" href="/oyun/renk-dizisi.html" data-kat="Hafıza">
-      <div class="thumb"><img src="/img/renk-dizisi.svg" alt="Renk Dizisi oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Renk Dizisi</h3>
-        <p>Yanan renkleri sırayla aklında tut ve tekrar et.</p>
-        <span class="tag">Hafıza</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/balon-patlat.html" data-kat="Refleks">
-      <div class="thumb"><img src="/img/balon-patlat.svg" alt="Balon Patlat oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Balon Patlat</h3>
-        <p>30 saniyede yükselen balonları patlat. Küçük balon 2 puan!</p>
-        <span class="tag">Refleks</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/reaksiyon-testi.html" data-kat="Refleks">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/reaksiyon-testi.svg" alt="Reaksiyon Testi oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Reaksiyon Testi</h3>
-        <p>Ekran yeşile dönünce hemen dokun. Tepki süren kaç milisaniye?</p>
-        <span class="tag">Refleks</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    </div>
-  </section>
-
   <p style="text-align:center;margin-top:24px"><a href="/" style="color:var(--accent-2)">← Tüm oyunlara dön</a></p>
 </main>
 
@@ -122,5 +124,6 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.tiklaoyna.com/"}, {"@type": "ListItem", "position": 2, "name": "Matematik Hızı", "item": "https://www.tiklaoyna.com/oyun/matematik-hizi.html"}]}</script>
 <script src="/games.js"></script>
 <script src="/oyunlar/matematik-hizi.js"></script>
+<script>oyunSonuIzle("matematik-hizi");</script>
 </body>
 </html>

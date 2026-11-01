@@ -43,6 +43,41 @@
     <noscript><p>Bu oyunu oynamak için tarayıcında JavaScript açık olmalıdır.</p></noscript>
   </div>
 
+  <section class="siradaki" id="siradaki">
+    <h2 class="section">Sıradaki oyun</h2>
+    <p class="siradaki-not" id="siradaki-not" hidden>Güzel tur! Bir tur daha oynayabilir ya da yeni bir oyun deneyebilirsin 👇</p>
+    <div class="grid">
+    <a class="card" href="/oyun/reaksiyon-testi.html" data-kat="Refleks">
+      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/reaksiyon-testi.svg" alt="Reaksiyon Testi oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Reaksiyon Testi</h3>
+        <p>Ekran yeşile dönünce hemen dokun. Tepki süren kaç milisaniye?</p>
+        <span class="tag">Refleks</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/xox.html" data-kat="Strateji">
+      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/xox.svg" alt="XOX oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>XOX</h3>
+        <p>Klasik üç taş oyunu. Kolay ya da zor seviyede bilgisayara karşı oyna.</p>
+        <span class="tag">Strateji</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/kelime-bulmaca.html" data-kat="Kelime">
+      <div class="thumb"><img src="/img/kelime-bulmaca.svg" alt="Kelime Bulmaca oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Kelime Bulmaca</h3>
+        <p>6 denemede 5 harfli gizli kelimeyi bul. Her gün yeni kelime!</p>
+        <span class="tag">Kelime</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    </div>
+    <p class="rastgele-satir"><button type="button" class="rastgele" id="rastgele">🎲 Rastgele bir oyun aç</button></p>
+  </section>
+
   <article class="oyun-bilgi icerik">
     <h2>Balon Patlat nedir?</h2>
     <p>Balon Patlat, ekranın altından yükselen balonları 30 saniye içinde patlatmaya çalıştığın hızlı bir refleks oyunudur. Küçük balonlar daha zor yakalanır ama daha fazla puan verir.</p>
@@ -71,39 +106,6 @@
     <p>Refleks oyunları kısa bir mola için ideal ve oynaması çok kolaydır. Her denemede skorunu biraz daha yukarı taşımaya çalışabilirsin. Rekorların yalnızca kendi cihazında saklanır; hesap açmana gerek yoktur.</p>
   </article>
 
-  <section>
-    <h2 class="section">Benzer oyunlar</h2>
-    <div class="grid">
-    <a class="card" href="/oyun/reaksiyon-testi.html" data-kat="Refleks">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/reaksiyon-testi.svg" alt="Reaksiyon Testi oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Reaksiyon Testi</h3>
-        <p>Ekran yeşile dönünce hemen dokun. Tepki süren kaç milisaniye?</p>
-        <span class="tag">Refleks</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/mayin-tarlasi.html" data-kat="Bulmaca">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/mayin-tarlasi.svg" alt="Mayın Tarlası oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Mayın Tarlası</h3>
-        <p>Sayılara bakarak mayınları tahmin et ve tüm güvenli kareleri aç.</p>
-        <span class="tag">Bulmaca</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/dort-bagla.html" data-kat="Strateji">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/dort-bagla.svg" alt="Dört Bağla oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Dört Bağla</h3>
-        <p>Bilgisayardan önce dört taşı yan yana getir.</p>
-        <span class="tag">Strateji</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    </div>
-  </section>
-
   <p style="text-align:center;margin-top:24px"><a href="/" style="color:var(--accent-2)">← Tüm oyunlara dön</a></p>
 </main>
 
@@ -122,5 +124,6 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.tiklaoyna.com/"}, {"@type": "ListItem", "position": 2, "name": "Balon Patlat", "item": "https://www.tiklaoyna.com/oyun/balon-patlat.html"}]}</script>
 <script src="/games.js"></script>
 <script src="/oyunlar/balon-patlat.js"></script>
+<script>oyunSonuIzle("balon-patlat");</script>
 </body>
 </html>

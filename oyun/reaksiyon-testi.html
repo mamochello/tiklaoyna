@@ -43,6 +43,41 @@
     <noscript><p>Bu oyunu oynamak için tarayıcında JavaScript açık olmalıdır.</p></noscript>
   </div>
 
+  <section class="siradaki" id="siradaki">
+    <h2 class="section">Sıradaki oyun</h2>
+    <p class="siradaki-not" id="siradaki-not" hidden>Güzel tur! Bir tur daha oynayabilir ya da yeni bir oyun deneyebilirsin 👇</p>
+    <div class="grid">
+    <a class="card" href="/oyun/mayin-tarlasi.html" data-kat="Bulmaca">
+      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/mayin-tarlasi.svg" alt="Mayın Tarlası oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Mayın Tarlası</h3>
+        <p>Sayılara bakarak mayınları tahmin et ve tüm güvenli kareleri aç.</p>
+        <span class="tag">Bulmaca</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/tikla-hizi.html" data-kat="Refleks">
+      <div class="thumb"><img src="/img/tikla-hizi.svg" alt="Tıkla Hızı oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Tıkla Hızı</h3>
+        <p>10 saniyede kaç kez tıklayabilirsin? Rekorunu kır!</p>
+        <span class="tag">Refleks</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    <a class="card" href="/oyun/yilan.html" data-kat="Klasik">
+      <div class="thumb"><img src="/img/yilan.svg" alt="Yılan oyunu" width="240" height="150" loading="lazy"></div>
+      <div class="body">
+        <h3>Yılan</h3>
+        <p>Yemleri ye, uzun ol, duvara ve kendine çarpma!</p>
+        <span class="tag">Klasik</span>
+        <span class="oyna">▶ Oyna</span>
+      </div>
+    </a>
+    </div>
+    <p class="rastgele-satir"><button type="button" class="rastgele" id="rastgele">🎲 Rastgele bir oyun aç</button></p>
+  </section>
+
   <article class="oyun-bilgi icerik">
     <h2>Reaksiyon Testi nedir?</h2>
     <p>Reaksiyon Testi, görsel uyarana ne kadar hızlı tepki verdiğini milisaniye cinsinden ölçen basit bir testtir. Ekran kırmızıyken beklersin, yeşile döndüğü anda dokunursun.</p>
@@ -71,39 +106,6 @@
     <p>Ortalama bir insanın görsel tepki süresi genellikle 200–300 milisaniye civarındadır. Cihazın ve ekranın gecikmesi sonucu biraz etkileyebilir, bu yüzden sonuçlar eğlence amaçlıdır. Rekorların yalnızca kendi cihazında saklanır; hesap açmana gerek yoktur.</p>
   </article>
 
-  <section>
-    <h2 class="section">Benzer oyunlar</h2>
-    <div class="grid">
-    <a class="card" href="/oyun/mayin-tarlasi.html" data-kat="Bulmaca">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/mayin-tarlasi.svg" alt="Mayın Tarlası oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Mayın Tarlası</h3>
-        <p>Sayılara bakarak mayınları tahmin et ve tüm güvenli kareleri aç.</p>
-        <span class="tag">Bulmaca</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/dort-bagla.html" data-kat="Strateji">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/dort-bagla.svg" alt="Dört Bağla oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>Dört Bağla</h3>
-        <p>Bilgisayardan önce dört taşı yan yana getir.</p>
-        <span class="tag">Strateji</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    <a class="card" href="/oyun/xox.html" data-kat="Strateji">
-      <div class="thumb"><span class="yeni">YENİ</span><img src="/img/xox.svg" alt="XOX oyunu" width="240" height="150" loading="lazy"></div>
-      <div class="body">
-        <h3>XOX</h3>
-        <p>Klasik üç taş oyunu. Kolay ya da zor seviyede bilgisayara karşı oyna.</p>
-        <span class="tag">Strateji</span>
-        <span class="oyna">▶ Oyna</span>
-      </div>
-    </a>
-    </div>
-  </section>
-
   <p style="text-align:center;margin-top:24px"><a href="/" style="color:var(--accent-2)">← Tüm oyunlara dön</a></p>
 </main>
 
@@ -122,5 +124,6 @@
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Ana Sayfa", "item": "https://www.tiklaoyna.com/"}, {"@type": "ListItem", "position": 2, "name": "Reaksiyon Testi", "item": "https://www.tiklaoyna.com/oyun/reaksiyon-testi.html"}]}</script>
 <script src="/games.js"></script>
 <script src="/oyunlar/reaksiyon-testi.js"></script>
+<script>oyunSonuIzle("reaksiyon-testi");</script>
 </body>
 </html>
