@@ -34,20 +34,35 @@
 <main class="container icerik">
   <nav class="breadcrumb" aria-label="Sayfa yolu"><a href="/">Ana Sayfa</a> › <a href="/rehber/">Rehber</a> › <span>2048 Oyununda Kazanma Stratejileri</span></nav>
   <h1>2048 Oyununda Kazanma Stratejileri</h1>
-  <p class="tarih">Tıklaoyna Rehber · Son güncelleme: 9 Ekim 2026</p>
+  <p class="tarih">Tıklaoyna Rehber · Son güncelleme: 11 Kasım 2026</p>
     <h2>Önce temel mantığı kavra</h2>
-    <p>2048&#x27;de her hamle tahtadaki tüm kutuları aynı yöne kaydırır. Aynı değerdeki iki kutu birleşir ve değeri iki katına çıkar. Rastgele kaydırmak başlangıçta işe yarar ama tahta dolmaya başladığında oyunu kaybettirir. Bu yüzden bir plan gerekir.</p>
-    <p>Plan çok basit: en büyük kutuyu bir köşeye yerleştir ve oyun boyunca orada tut. Diğer kutular bu köşenin etrafında düzenli bir sıra oluşturur.</p>
-    <h2>Köşe stratejisi</h2>
-    <p>Bir köşe seç, örneğin sol alt. Büyük kutu orada kalsın. Bunun için çoğunlukla sola ve aşağı hamle yap. Sağa hamleyi yalnızca başka seçeneğin kalmadığında kullan. Yukarı hamle ise büyük kutuyu köşeden çıkarabileceği için en son çare olmalı.</p>
-    <p>Alt satırı en büyük sayıdan küçüğe doğru dolu tutmaya çalış. Alt satır dolu ve sıralıysa, kutular birleştikçe zincirleme olarak büyür.</p>
-    <h2>Sayıları sıralı tut</h2>
-    <p>İyi oyuncular tahtayı yılan gibi düzenler: alt satırda soldan sağa büyükten küçüğe, bir üst satırda ise tersi yönde. Bu sıra sayesinde art arda birleşmeler olur ve alan açılır.</p>
-    <p>Yan yana duran ama birleşemeyen farklı değerler (örneğin 8 ile 32) en büyük sorundur. Bunlar sıranın içine girmeden önce küçük kutuları birleştirip aradaki boşluğu kapat.</p>
+    <p>2048'de her hamle tahtadaki tüm kutuları aynı yöne kaydırır. Aynı değerdeki iki kutu çarpışınca birleşir ve değeri iki katına çıkar: 2 ile 2 dörde, 4 ile 4 sekize dönüşür. Her hamleden sonra tahtaya yeni bir kutu (2 ya da 4) eklenir. Tahta dolar ve hiçbir birleşme kalmazsa oyun biter.</p>
+    <p>Rastgele kaydırmak ilk dakikalarda işe yarar, ama tahta dolmaya başladığında oyunu kaybettirir. 2048'e ulaşan oyuncuların ortak noktası şansı değil, bir planı olmasıdır. Aşağıdaki plan çok basit ve her seviyede uygulanabilir.</p>
+    <h2>Köşe stratejisi: en büyük kutuyu tek yerde tut</h2>
+    <p>Bir köşe seç, örneğin sol alt. En büyük kutu oyun boyunca orada kalmalı. Bunun için neredeyse tüm hamlelerini iki yönle yap: sola ve aşağı. Üçüncü yön olarak sağı yalnızca başka çaren kalmadığında kullan. Yukarı hamleyi ise en son çare olarak sakla, çünkü büyük kutuyu köşeden çıkarabilir.</p>
+    <p>Bu stratejinin mantığı şudur: büyük kutu köşedeyse kenarında yalnızca iki komşusu olur ve tahtanın geri kalanı ona doğru akar. Büyük kutu ortaya kaçarsa her yönden küçük kutularla çevrilir ve birleşemez hâle gelir.</p>
+    <h2>Hamle sırası: pratikte nasıl görünür?</h2>
+    <p>En büyük kutu sol altta olsun. Sola kaydır, aşağı kaydır, tekrar sola kaydır, tekrar aşağı kaydır. Çoğu zaman bu döngü tahtayı kendiliğinden toplar. Bir süre sonra sola ve aşağı hamle artık hiçbir şeyi değiştirmeyecek hâle gelir. İşte o zaman sağa kaydır, ama bunu yaptıktan hemen sonra sola dön ki alt satır eski hâline gelsin.</p>
+    <p>Sağa hamle yapmak zorunda kalırsan alt satırın dolu olması seni kurtarır: dolu satırda kayacak boş kare olmadığı için büyük kutu yerinde kalır (yan yana aynı sayılar yoksa satır hiç değişmez). Yukarı hamle ise alt satırdaki kutuları bile oynatabilir, bu yüzden gerçekten son çare olarak kalmalı.</p>
+    <h2>Sayıları sıralı tut: yılan düzeni</h2>
+    <p>İyi oyuncular tahtayı yılan gibi düzenler. Alt satırda soldan sağa büyükten küçüğe doğru sıralan: örneğin 256, 128, 64, 32. Bir üst satırda ise tersi yönde ilerle. Bu düzen sayesinde bir birleşme bir sonrakini tetikler: 32 ile 32 birleşip 64 olur, o 64 yanındaki 64'le birleşip 128 olur ve zincir alt satırda ilerler.</p>
+    <p>Sıranın bozulduğu yer genellikle şöyle görünür: iki büyük kutu arasına küçük bir kutu sıkışır (örneğin 64, 4, 32). Bu küçük kutu birleşemeyen bir engeldir. Böyle bir durumda öncelik, küçük kutuyu bir komşusuyla birleştirmek olmalıdır.</p>
     <h2>Sık yapılan hatalar</h2>
-    <p>Telaşla art arda aynı yönü ya da yönleri değiştirerek kaydırmak, en büyük kutuyu köşeden çıkarır. Her hamleden önce tahtaya bir saniye bak.</p>
-    <p>Küçük kutuları tahtanın her yerine dağıtmak da hata. Küçük kutuları tek bir bölgede topla ve birleştir.</p>
-    <p>2048&#x27;e ulaştıktan sonra oyuna devam edebilirsin. Aynı stratejiyle 4096 ve ötesine gitmek mümkün.</p>
+    <ul>
+      <li>Telaşla art arda farklı yönlere kaydırmak. Büyük kutuyu köşeden çıkarır ve birkaç hamlede tüm düzeni bozar. Her hamleden önce tahtaya bir saniye bak.</li>
+      <li>Küçük kutuları tahtanın her yerine dağıtmak. Küçük kutuları tek bir bölgede topla ki birleşebilsinler.</li>
+      <li>Aynı yönde yalnızca kaydırma sayısını artırmak. Sürekli aşağı basarsan satırlar dolar ve sonunda yan hareket etmek zorunda kalırsın. Hamleleri dönüşümlü kullan.</li>
+      <li>Boşluk bırakmamak. Tahtada her zaman en az iki üç boş kare kalmasına dikkat et. Boş kare, birleşme için nefes alanıdır.</li>
+    </ul>
+    <h2>Tahta dolmaya başladığında ne yapmalı?</h2>
+    <p>Tahta sıkışınca panik yapma, her hamleden önce şu üç soruyu sor: Hangi hamle bir birleşme yapar? Hangi hamle büyük kutuyu yerinde bırakır? Hangi hamle sonrasında tahtada daha çok boş kare kalır? Üç soruya birden olumlu cevap veren hamle en iyisidir. Hiçbiri yoksa büyük kutuyu en az riske atan hamleyi seç.</p>
+    <p>Kurtarılabilecek durumları kaçırmamak için birleşme fırsatlarını soldan sağa ve yukarıdan aşağıya doğru tek tek tara. Çoğu zaman kaybettin sandığın bir oyunda tek bir birleşme tüm düzeni açar.</p>
+    <h2>Tahtayı okuma alışkanlığı</h2>
+    <p>Her hamleden önce tahtaya soldan sağa ve yukarıdan aşağıya bakarak üç şeyi kontrol et: büyük kutu hâlâ köşede mi, alt satır sıralı mı, hangi kutular birleşmeye yakın. Bu üç saniyelik kontrol, çoğu hatayı önler. Hızlı oynayan oyuncuların değil, düşünerek oynayanların skoru yüksek olur.</p>
+    <h2>Telefonda oynarken</h2>
+    <p>Telefonda parmağını ekranda net ve kısa kaydır. Yarım kalan kaydırmalar yanlış yön algılanmasına yol açabilir. Telefonu iki elinle tutup baş parmağınla oynamak çoğu kişi için en rahat yöntemdir. Hamleleri acele etmeden yap; 2048 hız oyunu değil, planlama oyunudur.</p>
+    <h2>2048'den sonrası</h2>
+    <p>2048 kutusunu oluşturduktan sonra oyuna devam edebilirsin. Aynı strateji 4096 ve daha yüksek değerler için de geçerlidir. Tek fark, sıranın çok daha uzun olması ve her hatanın daha pahalıya mal olmasıdır. Yüksek skor peşindeysen köşe stratejisinden asla sapma.</p>
 
   <div class="oyna-cagri">
     <p>Öğrendiklerini denemek ister misin?</p>
